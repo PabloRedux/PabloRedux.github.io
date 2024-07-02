@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PabloRedux</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script>
+	const hover = (e) => { 
+		const slice = e.firstChild.href.indexOf('#') + 1;
+		const ref = e.firstChild.href.slice(slice);
+		console.log(ref);
+		const el = document.getElementById(ref)
+		el.style.color = "white";
+		el.style.background = "black";
+	}
+
+	const hoverOff = (e) => { 
+		const slice = e.firstChild.href.indexOf('#') + 1;
+		const ref = e.firstChild.href.slice(slice);
+		const el = document.getElementById(ref)
+		el.style.color = "black";
+		el.style.background = "white";
+	}
+	</script>
+</head>
+<body>
+	<div id="intro">
+		<div id="hcol-1">
+			<h1 id="header-name">PabloRedux</h1>
+			<ul> 
+				<div class="nav-li">
+					<li onmouseenter="hover(this)" onmouseleave="hoverOff(this)"><a href="#essays">Little essays</a></li>
+					<li>∙</li>
+					<li onmouseenter="hover(this)" onmouseleave="hoverOff(this)"><a href="#twitter">Twitter</a></li>
+				</div>
+				<div class="nav-li">
+					<li><a 	href="mailto:pabloredux@gmail.com">Contact</a></li>
+				</div>
+			</ul>
+		</div>
+		<div id="hcol-2">
+			<p>Evolution: it's nothing personal.  (Sorry if I ask too many questions... Share nicely!)</p> 
+			<p>I'm here because you're here.</p>
+		</div>
+	</div>
+	<div id="column-wrap">
+		<div id="col-1" valign="top">		
+			<h1 id="essays">Little essays</h1>
+			<div class="essays">
+				<p><a href="https://pabloredux.wordpress.com/">pabloredux</a></a></p>
+        <p>Asynchronous conversations with Stuart Boardman: <a href="https://asynchronies.wordpress.com//">Asynchronies</a></a></p>
+		</div>
+		<div id="col-2" valign="top">
+			<h2 id="twitter">Twitter</h3>
+			<div class="twitter">
+				<p><a href="https://twitter.com/PabloRedux/">PabloRedux</a></a></p>
+        <p><a href="https://twitter.com/pclh_twit//">twit</a></a></p>
+			</div>	
+		</div>								
+	</div>
+</body>			
+</html>
